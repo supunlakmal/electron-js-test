@@ -2,10 +2,10 @@
   "private": true,
   "name": "test",
   "description": "test",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "author": {
     "name": "supun",
-    "email": "supun@test.dev"
+    "email": "spun@test.dev"
   },
   "main": "app/background.js",
   "icon": "app/icons/icon.png",
@@ -26,8 +26,10 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
+    "electron-log": "^4.4.8",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.1",
+    "electron-updater": "^5.0.5",
     "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
@@ -93,5 +95,9 @@
     "typescript": "^4.6.2",
     "valtio": "1.3.1"
   },
-  "readme": "README.md"
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supunlakmal/desktop-weather-app-demo.git"
+  }
 }

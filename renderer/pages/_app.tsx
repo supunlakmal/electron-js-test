@@ -25,7 +25,7 @@ export default function (props: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div> "version": "0.0.1",</div>
+        <div> "version": "0.0.6",</div>
         {/* <Component {...pageProps} /> */}
       </ThemeProvider>
     </React.Fragment>
