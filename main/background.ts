@@ -1,14 +1,9 @@
-import { app, ipcMain, dialog } from "electron";
-import serve from "electron-serve";
-import { createWindow } from "./helpers";
-// const { autoUpdater } = require("electron-updater");
-import { autoUpdater } from "electron-updater";
+import { app } from "electron";
 import log from "electron-log";
+import serve from "electron-serve";
+import { autoUpdater } from "electron-updater";
+import { createWindow } from "./helpers";
 
-let updateInterval = null;
-let updateCheck = false;
-let updateFound = false;
-let updateNotAvailable = false;
 const isProd: boolean = process.env.NODE_ENV === "production";
 autoUpdater.logger = log;
 log.info("App starting...");
@@ -79,45 +74,3 @@ autoUpdater.on("download-progress", (progressObj) => {
 autoUpdater.on("update-downloaded", (info) => {
   sendStatusToWindow("Update downloaded");
 });
-
-// autoUpdater.on("update-available", (e) => {
-//   // alert(JSON.stringify(e));
-//   // const dialogOpts = {
-//   //   type: "info",
-//   //   buttons: ["Ok"],
-//   //   title: ` Update Available`,
-//   //   message:e,
-//   //   detail: `${JSON.stringify(e)}`,
-//   // };
-//   // if (!updateCheck) {
-//   //   updateInterval = null;
-//   //   dialog.showMessageBox(dialogOpts);
-//   //   updateCheck = true;
-//   // }
-// });
-
-// autoUpdater.on("update-downloaded", (_event) => {
-//   if (!updateFound) {
-//     updateInterval = null;
-//     updateFound = true;
-
-//     setTimeout(() => {
-//       autoUpdater.quitAndInstall();
-//     }, 3500);
-//   }
-// });
-
-// autoUpdater.on("update-not-available", (_event) => {
-//   const dialogOpts = {
-//     type: "info",
-//     buttons: ["Ok"],
-//     title: `Update Not available for ${autoUpdater.channel}`,
-//     message: "A message!",
-//     detail: `Update Not available for ${autoUpdater.channel}`,
-//   };
-
-//   if (!updateNotAvailable) {
-//     updateNotAvailable = true;
-//     dialog.showMessageBox(dialogOpts);
-//   }
-// });
