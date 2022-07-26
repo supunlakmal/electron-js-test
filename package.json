@@ -2,7 +2,7 @@
   "private": true,
   "name": "test",
   "description": "test",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "author": {
     "name": "supun",
     "email": "spun@test.dev"
@@ -98,6 +98,6 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/supunlakmal/desktop-weather-app-demo.git"
+    "url": "https://github.com/supunlakmal/electron-js-test.git"
   }
 }
